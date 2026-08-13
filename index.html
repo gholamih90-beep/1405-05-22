@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HG Export ERP - سامانه انبار گمرکی کلینکر</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="brand">
+          <svg
+            class="hg-mark"
+            viewBox="0 0 100 100"
+            width="34"
+            height="34"
+            aria-label="HG"
+          >
+            <polygon
+              points="50,4 92,27 92,73 50,96 8,73 8,27"
+              fill="url(#hgGradHeader)"
+              stroke="#0b1420"
+              stroke-width="3"
+            />
+            <text
+              x="50"
+              y="63"
+              text-anchor="middle"
+              font-family="Tahoma,Segoe UI,Arial,sans-serif"
+              font-weight="800"
+              font-size="34"
+              fill="#101b2d"
+            >
+              HG
+            </text>
+            <defs>
+              <linearGradient id="hgGradHeader" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#e1bc55" />
+                <stop offset="1" stop-color="#b9891e" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="brand-text"
+            ><strong>HG ERP</strong
+            ><small>سامانه مدیریت انبار و صادرات کلینکر</small></span
+          >
+        </div>
+        <div class="topbar-actions">
+          <span class="live-dot"></span
+          ><span class="topbar-status" id="dbStatus"
+            >در حال اتصال به پایگاه داده...</span
+          >
+          <span class="filestore-status" id="filestoreStatus"></span>
+        </div>
+      </header>
+
+      <div class="shell">
+        <nav class="sidenav">
+          <a href="#/dashboard" data-nav="dashboard"
+            ><span class="nav-ico">⌂</span>داشبورد</a
+          >
+          <a href="#/receipts" data-nav="receipts"
+            ><span class="nav-ico">▣</span>قبض‌ها</a
+          >
+          <a href="#/declarations" data-nav="declarations"
+            ><span class="nav-ico">▤</span>اظهارها</a
+          >
+          <a href="#/allocations" data-nav="allocations"
+            ><span class="nav-ico">↗</span>تخصیص‌ها</a
+          >
+          <a href="#/vessels" data-nav="vessels"
+            ><span class="nav-ico">⚓</span>شناورها و عملیات</a
+          >
+          <a href="#/inventory" data-nav="inventory"
+            ><span class="nav-ico">◈</span>موجودی</a
+          >
+          <a href="#/tree" data-nav="tree"
+            ><span class="nav-ico">⌘</span>شجره قبض</a
+          >
+          <a href="#/reports" data-nav="reports"
+            ><span class="nav-ico">▥</span>گزارش‌ها</a
+          >
+          <a href="#/backup" data-nav="backup"
+            ><span class="nav-ico">↥</span>پشتیبان‌گیری</a
+          >
+          <a href="#/settings" data-nav="settings"
+            ><span class="nav-ico">⚙</span>تنظیمات</a
+          >
+        </nav>
+
+        <main class="content" id="content">
+          <!-- rendered by app.js -->
+        </main>
+      </div>
+
+      <div id="modalRoot"></div>
+      <div id="toastRoot"></div>
+    </div>
+
+    <script src="./js/html2canvas.min.js"></script>
+    <script src="./js/jszip.min.js"></script>
+    <script src="./js/jspdf.umd.min.js"></script>
+    <script src="./js/production-data.js"></script>
+    <script src="./js/filestore.js"></script>
+    <script src="./js/db.js"></script>
+    <script src="./js/logic.js"></script>
+    <script src="./js/jalali.js"></script>
+    <script src="./js/app.js"></script>
+    <footer class="app-credit">
+      <svg
+        class="hg-mark-small"
+        viewBox="0 0 100 100"
+        width="20"
+        height="20"
+        aria-label="HG"
+      >
+        <polygon
+          points="50,4 92,27 92,73 50,96 8,73 8,27"
+          fill="url(#hgGradFooter)"
+          stroke="#0b1420"
+          stroke-width="4"
+        />
+        <text
+          x="50"
+          y="64"
+          text-anchor="middle"
+          font-family="Tahoma,Segoe UI,Arial,sans-serif"
+          font-weight="800"
+          font-size="36"
+          fill="#101b2d"
+        >
+          HG
+        </text>
+        <defs>
+          <linearGradient id="hgGradFooter" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#e1bc55" />
+            <stop offset="1" stop-color="#b9891e" />
+          </linearGradient>
+        </defs></svg
+      ><span>طراحی و توسعه: <b>Hamed Gholami</b></span>
+    </footer>
+  </body>
+</html>
